@@ -1,0 +1,24 @@
+server:
+  port: 8080
+spring:
+  thymeleaf:
+    cache: false
+    prefix: file:src/amain/resources/templates/
+    suffix: .html
+  devtools:
+    livereload:
+      enabled: true
+    restart:
+      enabled: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/gov_calendar?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true
+    username: root
+    password: ma29562956!
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update # DB ??? ????, ?? ?????? ???? ????.
+  jwt:
+    secret: 7835cd8b85d4563fbcd708c6cae31dc5d401a12d5a4b8298dad168e60c4e7107f4df67453e0daa6cf35a1db72fa450a2037fd03be884f7576f139847105635c3f58b64907b85ecb01d66c20f0f81d74e81a643886d6fa7864cf65c9952013d5b970f008cf53672eda7dcd4135c08c1a228ada1e112c937f8364b1794c1c7a5f6c9e6c4db7508f21419f8addaefae01d0b59da650df2e7e2529518b1f8d20295ccb77dfaaa6dcc635e86c51be2b93d1b771082d48deac70897dacd3a1766a33d7a75c2e70b4ce285ef1a31c7c83d0dcd6364b7c3aac30b4d95ff0a1a00c0c8eba99d882d6a19b3a9da2c5ceced36e3fc11e57ed4bd9063597c394754145cdebfb;
+    access-token-expire-time: 43200000 # 12시간
+    refresh-token-expire-time: 604800000 # 7일
